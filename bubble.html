@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble in my object today</title>
+</head>
+<style>
+  h1 {
+    color: green;
+    background-color: lightskyblue;
+  }
+
+  #list-container {
+    color: blue;
+    font-size: 20px;
+  }
+
+  #btn-add-item {
+    font-size: larger;
+    background-color: chartreuse;
+    color: chocolate;
+  }
+</style>
+
+<body>
+  <h1>How to work with Bubble in the DOM</h1>
+  <section>
+    <ol id="list-container">
+      <li class="item">one items</li>
+      <li class="item">two things</li>
+      <li class="item"> three subjects</li>
+      <li class="item"> four topics</li>
+      <li class="item"> five matters</li>
+    </ol>
+    <button id="btn-add-item">Add Items</button>
+  </section>
+
+  <script>
+    const items = document.getElementsByClassName('item');
+    // for (const item of items) {
+    //   item.addEventListener('click', function (event) {
+    //     event.target.parentNode.removeChild(event.target);
+    //   })
+    // }
+    document.getElementById('list-container').addEventListener('click', function (event) {
+      event.target.parentNode.removeChild(event.target);
+    })
+
+
+    document.getElementById('btn-add-item').addEventListener('click', function () {
+      const listContainer = document.getElementById('list-container');
+      const li = document.createElement('li');
+      li.innerText = 'Brand new item addd';
+      li.classList.add('item');
+      listContainer.appendChild(li);
+    })
+
+  </script>
+</body>
+
+</html>

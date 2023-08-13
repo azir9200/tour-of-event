@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour of DOM</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My DOM</h1>
+  </header>
+  <main>
+    <section id="jalali-container">
+      <h1>My awesome DOM de BABA</h1>
+      <ul id="jalali">
+        <li>Jalali set</li>
+        <li>Safayet</li>
+        <li>bonovash</li>
+        <li>DOM de re BABA</li>
+      </ul>
+    </section>
+    <section id="fruit-container">
+      <h1 id="fruits-title">Fruis I Like</h1>
+      <ul class="fruits-name">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Carrot</li>
+      </ul>
+    </section>
+    <section class=" fruit-container">
+      <h1 id="place-nam">Places I Like to Visit</h1>
+      <u class="places-list">
+        <li class="important-place">Sundorbon</li>
+        <li class="important-place">Bandorbon</li>
+        <li class="important-place">Shakbon</li>
+        <li class="important-place">Katabon</li>
+      </u>
+    </section>
+  </main>
+
+
+  //
+
+  <script src="append.js"></script>
+  <script src="folderjs/dom.js"></script>
+  <script>
+    const student = {
+      name: 'Abul',
+      ID: 11,
+      study: function (time) {
+        console.log(time, 'study  kortese');
+      }
+    }
+    const liTags = document.getElementsByTagName('li');
+    for (const li of liTags) {
+      //console.log(li.innerText);
+    }
+    const places = document.getElementsByClassName('important-place');
+    for (const place of places) {
+      //console.log(place.innerText);
+    }
+
+    const fruitChange = document.getElementById('fruits-title');
+    fruitChange.innerText = 'I change title name by js.'
+    fruitChange.innerText['apple'] = 'qiui';
+    //console.log(fruitChange);
+
+    const nameChange = document.getElementById('place-nam');
+    nameChange.innerText = 'Which Place you want to Visit ?'
+    //console.log(nameChange);
+
+
+    const someLi = document.querySelectorAll('.fruit-container');
+    someLi.innerText = ' i want to change this name.'
+    //console.log(someLi);
+    for (const li of someLi) {
+      //console.log(li.innerText);
+    }
+
+    const newcor = document.getElementById('place-nam');
+    newcor.style.color = 'yellow';
+
+  </script>
+</body>
+
+</html>
